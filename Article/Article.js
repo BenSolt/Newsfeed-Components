@@ -112,3 +112,12 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
 
 */
+
+function create(article,date, expandButton){
+
+const article = document.createElement('div');
+const title1 = document.createElement('h2');
+const date1 = document.createElement('p')
+const expandbtn = document.createElement('span')
+
+}
