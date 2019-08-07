@@ -85,7 +85,20 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+
+
+  {
+    title: 'Test',
+    date: 'July 1st, 2022',
+    firstParagraph: `TREX RtttttEXREX REX REX REX REX REX`,
+
+    secondParagraph: `REX REX REX REX REX REX REX REX`,
+
+    thirdParagraph: `tttttttttttttttttttttttttttttttttttttttttttt`
   }
+
+
 ];
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
@@ -116,13 +129,19 @@ const data = [
 
 
 
-const container = document.querySelector('.container');
 
 
 
-cardData.forEach(data => {
+
+
+
+const article = document.querySelector(".articles");
+
+
+
+data.forEach(data => {
   
-  container.appendChild(createArticle(data.title, data.date, data.firstParagraph,
+  article.appendChild(createArticle(data.title, data.date, data.firstParagraph,
    data.secondParagraph, data.thirdParagraph))
 })
 
@@ -156,8 +175,24 @@ date1.classList.add('date')
 span1.classList.add('expandButton')
 
 // set text content
-content1.textContent = content
+
 title1.textContent = title
+ date1.textContent = date
+ para1.textContent = firstParagraph
+ para2.textContent = secondParagraph
+ para3.textContent = thirdParagraph
+ span1.textContent = 'Click Here'
+
+
+
+// Span Clicked
+
+ span1.addEventListener('click', () => {
+  console.log('Article Open')
+article.classList.toggle('article-open');
+
+});
+
 
 
 
