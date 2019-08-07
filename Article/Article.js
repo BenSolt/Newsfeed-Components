@@ -113,11 +113,57 @@ const data = [
 
 */
 
-function create(article,date, expandButton){
 
-const article = document.createElement('div');
-const title1 = document.createElement('h2');
-const date1 = document.createElement('p')
-const expandbtn = document.createElement('span')
 
+
+const container = document.querySelector('.container');
+
+
+
+cardData.forEach(data => {
+  
+  container.appendChild(createArticle(data.title, data.date, data.firstParagraph,
+   data.secondParagraph, data.thirdParagraph))
+})
+
+
+
+function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+
+//define new elements
+
+  const article = document.createElement('div');
+  const title1 = document.createElement('h2');
+  const date1 = document.createElement('p');
+  const para1 = document.createElement('p');
+  const para2 = document.createElement('p');
+  const para3 = document.createElement('p');
+  const span1 = document.createElement('span');
+
+
+// Setup structure of elements
+
+article.appendChild(title1)
+article.appendChild(date1)
+article.appendChild(para1)
+article.appendChild(para2)
+article.appendChild(para3)
+article.appendChild(span1)
+
+// set class names
+article.classList.add('article')
+date1.classList.add('date')
+span1.classList.add('expandButton')
+
+// set text content
+content1.textContent = content
+title1.textContent = title
+
+
+
+
+
+
+return article
 }
+
