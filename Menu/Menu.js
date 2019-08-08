@@ -35,59 +35,50 @@ let menuItems = [
 */
 
 
-
-//CLICK EVENT
-
-const menuBtn = document.querySelector(".menu-button");
-
-const menubox = document.createElement('div');
-
-// For Each 
-
-menubox.forEach(function (array) {
-  const item = document.createElement('li');
-  item.textContent = array;
-  menubox2.appendChild(item);
-});
-
-
-
-
-
-
-
-function createMenu(cb){
+function createMenu(arr){
 
 
 // defined new elements
 
 
-const menubox2 = document.createElement('ul');
+  const list = document.createElement('ul');
+  const menu = document.createElement('div');
+  const menuBtn = document.querySelector(".menu-button");
+  //Structure of elements
+
+  menu.appendChild(list);
+
+  // Class Name
+
+  menu.classList.add('menu')
+
+  arr.forEach(item => {
+    let li = document.createElement('li') 
+    li.textContent = item
+    //list.prepend(li);
+    list.appendChild(li);
+    
+  });
 
 
-//Structure of elements
-
-menu.appendChild(item);
 
 
 
 
+  menuBtn.addEventListener('click', () => {
+    console.log('MENU Open')
+  menu.classList.toggle("menu--open");
 
-
-//  click Menu btn
-
- menuBtn.addEventListener('click', () => {
-  console.log('MENU Open')
-menubox.classList.toggle(".menu--open");
-
-});
+  });
 
 
 
-  
-return menuBtn
-}
 
+    
+  return menu
+  } 
 
+const header = document.querySelector('.header')
+header.appendChild(createMenu(menuItems))
 
   
