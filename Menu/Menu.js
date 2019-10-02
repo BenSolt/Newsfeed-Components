@@ -35,7 +35,7 @@ let menuItems = [
 */
 
 
-function createMenu(arr){
+function createMenu(array){
 
 
 // defined new elements
@@ -52,7 +52,7 @@ function createMenu(arr){
 
   menu.classList.add('menu')
 
-  arr.forEach(item => {
+  array.forEach(item => {
     let li = document.createElement('li') 
     li.textContent = item
     //list.prepend(li);

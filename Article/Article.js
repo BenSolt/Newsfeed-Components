@@ -181,9 +181,11 @@ title1.textContent = title
  para1.textContent = firstParagraph
  para2.textContent = secondParagraph
  para3.textContent = thirdParagraph
- span1.textContent = 'Click Here'
+ //span1.textContent = 'Click Here'
+ span1.textContent = '\u25bc'
 
-
+//  buttonOpen.textContent = '\u25bc';
+//  buttonClose.textContent = '\u25b2';
 
 // Span Clicked
 
