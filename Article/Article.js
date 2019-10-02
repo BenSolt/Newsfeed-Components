@@ -85,7 +85,20 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+
+
+  {
+    title: 'Test',
+    date: 'July 1st, 2022',
+    firstParagraph: `TREX RtttttEXREX REX REX REX REX REX`,
+
+    secondParagraph: `REX REX REX REX REX REX REX REX`,
+
+    thirdParagraph: `tttttttttttttttttttttttttttttttttttttttttttt`
   }
+
+
 ];
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
@@ -97,6 +110,7 @@ const data = [
     {three separate paragraph elements}
 
     <span class='expandButton'></span>
+    <span class='hideButton'></span>
   </div>
 
   Hint: You will need to use createElement more than once here!
@@ -112,3 +126,96 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
 
 */
+
+
+
+
+
+
+
+
+
+
+const article = document.querySelector(".articles");
+
+
+
+data.forEach(data => {
+  
+  article.appendChild(createArticle(data.title, data.date, data.firstParagraph,
+   data.secondParagraph, data.thirdParagraph))
+})
+
+
+
+function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+
+//define new elements
+
+  const article = document.createElement('div');
+  const title1 = document.createElement('h2');
+  const date1 = document.createElement('p');
+  const para1 = document.createElement('p');
+  const para2 = document.createElement('p');
+  const para3 = document.createElement('p');
+  const span1 = document.createElement('span');
+
+  const span2 = document.createElement('span');
+
+// Setup structure of elements
+
+article.appendChild(title1)
+article.appendChild(date1)
+article.appendChild(para1)
+article.appendChild(para2)
+article.appendChild(para3)
+article.appendChild(span1)
+
+//Read article- hide it when click
+article.appendChild(span2)
+
+// set class names
+article.classList.add('article')
+date1.classList.add('date')
+span1.classList.add('expandButton')
+
+span2.classList.add('hideButton')
+
+// set text content
+
+title1.textContent = title
+ date1.textContent = date
+ para1.textContent = firstParagraph
+ para2.textContent = secondParagraph
+ para3.textContent = thirdParagraph
+ span1.textContent = '\u25bc'
+
+
+ span2.textContent = 'Remove Article'
+
+//  buttonClose.textContent = '\u25b2';
+
+
+// Span Clicked
+
+ span1.addEventListener('click', () => {
+  console.log('Article Open')
+article.classList.toggle('article-open');
+
+});
+
+
+// STRETCH Span Clicked STRETCH
+
+span2.addEventListener('click', () => {
+  console.log('Article hide')
+article.classList.toggle('article-hide');
+
+});
+
+
+
+
+return article
+}
+
