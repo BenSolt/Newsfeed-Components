@@ -159,6 +159,7 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   const para3 = document.createElement('p');
   const span1 = document.createElement('span');
 
+  const span2 = document.createElement('span');
 
 // Setup structure of elements
 
@@ -168,6 +169,9 @@ article.appendChild(para1)
 article.appendChild(para2)
 article.appendChild(para3)
 article.appendChild(span1)
+
+//Read article- hide it when click
+article.appendChild(span2)
 
 // set class names
 article.classList.add('article')
@@ -181,11 +185,13 @@ title1.textContent = title
  para1.textContent = firstParagraph
  para2.textContent = secondParagraph
  para3.textContent = thirdParagraph
- //span1.textContent = 'Click Here'
  span1.textContent = '\u25bc'
 
-//  buttonOpen.textContent = '\u25bc';
+
+ span2.textContent = 'Remove Article'
+
 //  buttonClose.textContent = '\u25b2';
+
 
 // Span Clicked
 
@@ -196,7 +202,13 @@ article.classList.toggle('article-open');
 });
 
 
+// STRETCH Span Clicked STRETCH
 
+span2.addEventListener('click', () => {
+  console.log('Article hide')
+article.classList.toggle('article-hide');
+
+});
 
 
 

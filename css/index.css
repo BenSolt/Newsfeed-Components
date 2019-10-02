@@ -65,19 +65,26 @@
 }
 .article .expandButton {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 90%;
   font-size: 20px;
   color: green;
   cursor: pointer;
   transform: translate(-50%);
-  /* transform: scale(2); */
+  transform: scale(1.5);
   background-color: gray;
   border-radius: 5px;
 }
 .article-open {
   height: 400px;
 }
+
+/* STRETCH READ - HIDE ARTICLE */
+.article-hide {
+  display: none;
+}
+
+
 .menu-button {
   position: absolute;
   left: 20px;
