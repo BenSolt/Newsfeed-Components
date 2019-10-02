@@ -110,6 +110,7 @@ const data = [
     {three separate paragraph elements}
 
     <span class='expandButton'></span>
+    <span class='hideButton'></span>
   </div>
 
   Hint: You will need to use createElement more than once here!
@@ -177,6 +178,8 @@ article.appendChild(span2)
 article.classList.add('article')
 date1.classList.add('date')
 span1.classList.add('expandButton')
+
+span2.classList.add('hideButton')
 
 // set text content
 

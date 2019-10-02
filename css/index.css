@@ -68,16 +68,43 @@
   bottom: 20px;
   left: 90%;
   font-size: 20px;
-  color: green;
+  color: white;
   cursor: pointer;
   transform: translate(-50%);
   transform: scale(1.5);
-  background-color: gray;
+  background-color: green;
   border-radius: 5px;
+  padding: 3px;
 }
+
+.expandButton:hover{
+  background-color: gray;
+  color: green;
+}
+
+
 .article-open {
   height: 400px;
 }
+
+
+.article .hideButton {
+  position: absolute;
+  bottom: 10px;
+  left: 60%;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transform: translate(-50%);
+  transform: scale(1.25);
+  background-color: green;
+  border-radius: 3px;
+  padding: 4px;
+}
+.hideButton:hover{
+  background-color: gray;
+}
+
 
 /* STRETCH READ - HIDE ARTICLE */
 .article-hide {
