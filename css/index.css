@@ -66,12 +66,14 @@
 .article .expandButton {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  font-size: 12px;
-  color: grey;
+  left: 90%;
+  font-size: 20px;
+  color: green;
   cursor: pointer;
   transform: translate(-50%);
-  background-color: white;
+  /* transform: scale(2); */
+  background-color: gray;
+  border-radius: 5px;
 }
 .article-open {
   height: 400px;
